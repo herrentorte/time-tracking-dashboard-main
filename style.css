@@ -1,4 +1,44 @@
 #container  {
+}
+
+#profile-pic  {
+  border: 2px solid red;
+}
+
+#profile-pic img  {
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 50%;
+}
+
+#user{
+  width: 50%;
   display: flex;
-  flex-direction: column;
+}
+
+
+
+#unit-time nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.stat-heading h2  {
+  font-size: small;
+}
+
+.stat-time  {
+  font-size: x-large;
+}
+
+.stat-previous  {
+  font-size: small;
 }
