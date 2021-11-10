@@ -26,9 +26,28 @@
   justify-content: space-between;
 }
 
-.stats {
+main{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.stats  {
+  display: flex;
+  border: 1px solid red;
+  flex-direction: column;
+}
+
+.stats-background {
+  background-color: orange;
+  flex: 30%;
+}
+
+.stats-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-color: blue;
+  flex: 70%;
 }
 
 .stat-heading h2  {
