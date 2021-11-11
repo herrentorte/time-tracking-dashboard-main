@@ -1,22 +1,37 @@
-#container  {
+body {
+  background-color: hsl(226, 43%, 10%);
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 #profile-pic  {
-  border: 2px solid red;
-}
-
-#profile-pic img  {
-  border: 2px solid black;
-  border-radius: 50%;
-  height: 50%;
-}
-
-#user{
-  width: 50%;
+  margin: 2%;
+  height: 15vw;
   display: flex;
 }
 
+#profile-pic img  {
+  border-radius: 50%;
+  border: 2px solid white;
+}
 
+#user{
+  display: flex;
+  background-color: hsl(246, 80%, 60%);
+  color: white;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+#heading  {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 25px;
+  margin: 1%;
+}
 
 #unit-time nav ul {
   display: flex;
@@ -24,6 +39,8 @@
   padding: 0;
   margin: 0;
   justify-content: space-between;
+  color: white;
+  padding: 2%;
 }
 
 main{
@@ -34,20 +51,59 @@ main{
 
 .stats  {
   display: flex;
-  border: 1px solid red;
   flex-direction: column;
+  margin: 1%;
 }
 
 .stats-background {
-  background-color: orange;
   flex: 30%;
+  border-radius: 25px;
+}
+
+#work .stats-background {
+  background-color: hsl(15, 100%, 70%)
+}
+
+#play .stats-background {
+  background-color: hsl(195, 74%, 62%)
+}
+
+#study .stats-background {
+  background-color: hsl(348, 100%, 68%)
+}
+
+#exercise .stats-background {
+  background-color: hsl(145, 58%, 55%)
+}
+
+#social .stats-background {
+  background-color: hsl(264, 64%, 52%)
+}
+
+#self-care .stats-background {
+  background-color: hsl(43, 84%, 65%)
+}
+
+.stats-container  {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2%;
+  height: 6vh;
 }
 
 .stats-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: blue;
+  background-color: hsl(235, 46%, 20%);
   flex: 70%;
+  color: white;
+  border-radius: 25px;;
+}
+
+.stat-heading {
+  display: flex;
+  align-items: center;
+  padding: 5%;
 }
 
 .stat-heading h2  {
@@ -55,9 +111,38 @@ main{
 }
 
 .stat-time  {
+  display: flex;
   font-size: x-large;
+  align-items: center;
+  padding: 5%;
+}
+
+.stat-menu  {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5%;
 }
 
 .stat-previous  {
+  display: flex;
+  justify-content: flex-end;
   font-size: small;
+  align-items: center;
+  padding: 5%;
+}
+
+@media only screen and (min-width: 600px) {
+  main{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+  }
+
+  header  {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 25px;
+    margin: 1%;
+    width: 20%;
+  }
 }

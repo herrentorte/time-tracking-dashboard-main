@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Time Tracking Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
   </head>
   <body>
     <div id="container">
@@ -20,9 +21,9 @@
           <div id="unit-time">
             <nav>
               <ul>
-                <li>Daily</li>
-                <li>Monthly</li>
-                <li>Weekly</li>
+                <li><a href="#" onclick="dayFunc()">Daily</a></li>
+                <li><a href="#" onclick="weekFunc()">Weekly</a></li>
+                <li><a href="#" onclick="monthFunc()">Monthly</a></li>
               </ul>
             </nav>
           </div> <!-- unit-time -->
@@ -31,110 +32,139 @@
       <main>
         <div class="stats" id="work">
           <div class="stats-background">
-            heading
-          </div>
-          <div class="stats-info">
-            <div class="stat-heading">
-              <h2>Work</h2>
+            <div class="stats-container">
+              <img src="https://raw.githubusercontent.com/herrentorte/time-tracking-dashboard-main/master/icon-work.svg" alt="Icon Briefcase">
             </div>
-            <div class="stat-menu">
-              ...
-            </div>
-            <div class="stat-time">
-              hrs
-            </div>
-            <div class="stat-previous">
-              last Week
+            <div class="stats-info">
+              <div class="stat-heading">
+                <h2>Work</h2>
+              </div>
+              <div class="stat-menu">
+                <div class="img-container">
+                  <img src="https://raw.githubusercontent.com/herrentorte/time-tracking-dashboard-main/master/icon-ellipsis.svg" alt="Three dots">
+                </div>
+              </div>
+              <div class="stat-time" id="work-time-current">
+                5hrs
+              </div>
+              <div class="stat-previous" id="work-time-prev">
+                Yesterday - 7hrs
+              </div>
             </div>
           </div>
         </div> <!-- work -->
         <div class="stats" id="play">
           <div class="stats-background">
-          </div>
-          <div class="stats-info">
-            <div class="stat-heading">
-              <h2>Play</h2>
+            <div class="stats-container">
+              <img src="https://raw.githubusercontent.com/herrentorte/time-tracking-dashboard-main/master/icon-play.svg" alt="Icon Game Controller">
             </div>
-            <div class="stat-menu">
-              ...
-            </div>
-            <div class="stat-time">
-              hrs
-            </div>
-            <div class="stat-previous">
-              last Week
+            <div class="stats-info">
+              <div class="stat-heading">
+                <h2>Play</h2>
+              </div>
+              <div class="stat-menu">
+                <div class="img-container">
+                  <img src="https://raw.githubusercontent.com/herrentorte/time-tracking-dashboard-main/master/icon-ellipsis.svg" alt="Three dots">
+                </div>
+              </div>
+              <div class="stat-time" id="play-time-current">
+                1hr
+              </div>
+              <div class="stat-previous" id="play-time-prev">
+                Yesterday - 2hrs
+              </div>
             </div>
           </div>
         </div> <!-- play -->
         <div class="stats" id="study">
           <div class="stats-background">
-          </div>
-          <div class="stats-info">
-            <div class="stat-heading">
-              <h2>Study</h2>
+            <div class="stats-container">
+              <img src="https://raw.githubusercontent.com/herrentorte/time-tracking-dashboard-main/master/icon-study.svg" alt="Icon Documents">
             </div>
-            <div class="stat-menu">
-              ...
-            </div>
-            <div class="stat-time">
-              hrs
-            </div>
-            <div class="stat-previous">
-              last Week
+            <div class="stats-info">
+              <div class="stat-heading">
+                <h2>Study</h2>
+              </div>
+              <div class="stat-menu">
+                <div class="img-container">
+                  <img src="https://raw.githubusercontent.com/herrentorte/time-tracking-dashboard-main/master/icon-ellipsis.svg" alt="Three dots">
+                </div>
+              </div>
+              <div class="stat-time" id="study-time-current">
+                0hrs
+              </div>
+              <div class="stat-previous" id="study-time-prev">
+                Yesterday - 1hr
+              </div>
             </div>
           </div>
         </div> <!-- study -->
         <div class="stats" id="exercise">
           <div class="stats-background">
-          </div>
-          <div class="stats-info">
-            <div class="stat-heading">
-              <h2>Exercise</h2>
+            <div class="stats-container">
+              <img src="https://raw.githubusercontent.com/herrentorte/time-tracking-dashboard-main/master/icon-exercise.svg" alt="Icon Running Man">
             </div>
-            <div class="stat-menu">
-              ...
-            </div>
-            <div class="stat-time">
-              hrs
-            </div>
-            <div class="stat-previous">
-              last Week
+            <div class="stats-info">
+              <div class="stat-heading">
+                <h2>Exercise</h2>
+              </div>
+              <div class="stat-menu">
+                <div class="img-container">
+                  <img src="https://raw.githubusercontent.com/herrentorte/time-tracking-dashboard-main/master/icon-ellipsis.svg" alt="Three dots">
+                </div>
+              </div>
+              <div class="stat-time" id="exercise-time-current">
+                1hr
+              </div>
+              <div class="stat-previous" id="exercise-time-prev">
+                Yesterday - 1hr
+              </div>
             </div>
           </div>
         </div> <!-- exercise -->
         <div class="stats" id="social">
           <div class="stats-background">
-          </div>
-          <div class="stats-info">
-            <div class="stat-heading">
-              <h2>Social</h2>
+            <div class="stats-container">
+              <img src="https://raw.githubusercontent.com/herrentorte/time-tracking-dashboard-main/master/icon-social.svg" alt="Icon Speech Bubbles">
             </div>
-            <div class="stat-menu">
-              ...
-            </div>
-            <div class="stat-time">
-              hrs
-            </div>
-            <div class="stat-previous">
-              last Week
+            <div class="stats-info">
+              <div class="stat-heading">
+                <h2>Social</h2>
+              </div>
+              <div class="stat-menu">
+                <div class="img-container">
+                  <img src="https://raw.githubusercontent.com/herrentorte/time-tracking-dashboard-main/master/icon-ellipsis.svg" alt="Three dots">
+                </div>
+              </div>
+              <div class="stat-time" id="social-time-current">
+                1hr
+              </div>
+              <div class="stat-previous" id="social-time-prev">
+                Yesterday - 3hrs
+              </div>
             </div>
           </div>
         </div> <!-- social -->
         <div class="stats" id="self-care">
           <div class="stats-background">
-          </div>
-          <div class="stats-info">
-            <div class="stat-heading">
-              <h2>Self Care</h2>
+            <div class="stats-container">
+              <img src="https://raw.githubusercontent.com/herrentorte/time-tracking-dashboard-main/master/icon-self-care.svg" alt="Icon Heart">
             </div>
-            <div class="stat-menu">
-              ...
-            </div>
-            <div class="stat-time">
-              hrs
-            </div>
-            <div class="stat-previous">
-              last Week
+            <div class="stats-info">
+              <div class="stat-heading">
+                <h2>Self Care</h2>
+              </div>
+              <div class="stat-menu">
+                <div class="img-container">
+                  <img src="https://raw.githubusercontent.com/herrentorte/time-tracking-dashboard-main/master/icon-ellipsis.svg" alt="Three dots">
+                </div>
+              </div>
+              <div class="stat-time" id="self-time-current">
+                0hrs
+              </div>
+              <div class="stat-previous" id="self-time-prev">
+                Yesterday - 1hr
+              </div>
             </div>
           </div>
         </div> <!-- self-care -->
